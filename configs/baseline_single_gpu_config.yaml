@@ -1,0 +1,12 @@
+is_custom: true
+attention_impl: eager
+
+batch_size: 2
+seq_len: 1024
+
+precision: fp32
+compile: false
+grad_checkpoint_strat: none
+
+warmup_iters: 5
+measure_iters: 20

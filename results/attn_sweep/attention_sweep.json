@@ -1,0 +1,207 @@
+{
+  "results": [
+    {
+      "attn_impl": "eager",
+      "compile": false,
+      "seq_len": 512,
+      "precision": "fp16",
+      "fwd_ms": 27.104,
+      "bwd_ms": 110.825,
+      "peak_gb": 3.352,
+      "tok_s": 3712,
+      "oom": false
+    },
+    {
+      "attn_impl": "eager",
+      "compile": false,
+      "seq_len": 2048,
+      "precision": "fp16",
+      "fwd_ms": 186.19,
+      "bwd_ms": 509.908,
+      "peak_gb": 9.43,
+      "tok_s": 2942,
+      "oom": false
+    },
+    {
+      "attn_impl": "eager",
+      "compile": false,
+      "seq_len": 4096,
+      "precision": "fp16",
+      "fwd_ms": null,
+      "bwd_ms": null,
+      "peak_gb": null,
+      "tok_s": null,
+      "oom": true
+    },
+    {
+      "attn_impl": "eager",
+      "compile": false,
+      "seq_len": 4096,
+      "precision": "fp16",
+      "fwd_ms": null,
+      "bwd_ms": null,
+      "peak_gb": null,
+      "tok_s": null,
+      "oom": true,
+      "skipped_after_oom": true
+    },
+    {
+      "attn_impl": "sdpa",
+      "compile": false,
+      "seq_len": 512,
+      "precision": "fp16",
+      "fwd_ms": 26.253,
+      "bwd_ms": 98.533,
+      "peak_gb": 3.338,
+      "tok_s": 4103,
+      "oom": false
+    },
+    {
+      "attn_impl": "sdpa",
+      "compile": false,
+      "seq_len": 2048,
+      "precision": "fp16",
+      "fwd_ms": 56.135,
+      "bwd_ms": 191.258,
+      "peak_gb": 4.578,
+      "tok_s": 8278,
+      "oom": false
+    },
+    {
+      "attn_impl": "sdpa",
+      "compile": false,
+      "seq_len": 4096,
+      "precision": "fp16",
+      "fwd_ms": 128.734,
+      "bwd_ms": 364.945,
+      "peak_gb": 6.886,
+      "tok_s": 8297,
+      "oom": false
+    },
+    {
+      "attn_impl": "sdpa",
+      "compile": false,
+      "seq_len": 8192,
+      "precision": "fp16",
+      "fwd_ms": 324.464,
+      "bwd_ms": 908.271,
+      "peak_gb": 11.439,
+      "tok_s": 6645,
+      "oom": false
+    },
+    {
+      "attn_impl": "eager",
+      "compile": true,
+      "seq_len": 512,
+      "precision": "fp16",
+      "fwd_ms": 13.979,
+      "bwd_ms": 82.137,
+      "peak_gb": 3.353,
+      "tok_s": 5327,
+      "oom": false
+    },
+    {
+      "attn_impl": "eager",
+      "compile": true,
+      "seq_len": 2048,
+      "precision": "fp16",
+      "fwd_ms": 73.251,
+      "bwd_ms": 197.035,
+      "peak_gb": 6.656,
+      "tok_s": 7577,
+      "oom": false
+    },
+    {
+      "attn_impl": "eager",
+      "compile": true,
+      "seq_len": 4096,
+      "precision": "fp16",
+      "fwd_ms": null,
+      "bwd_ms": null,
+      "peak_gb": null,
+      "tok_s": null,
+      "oom": true
+    },
+    {
+      "attn_impl": "eager",
+      "compile": true,
+      "seq_len": 4096,
+      "precision": "fp16",
+      "fwd_ms": null,
+      "bwd_ms": null,
+      "peak_gb": null,
+      "tok_s": null,
+      "oom": true,
+      "skipped_after_oom": true
+    },
+    {
+      "attn_impl": "sdpa",
+      "compile": true,
+      "seq_len": 512,
+      "precision": "fp16",
+      "fwd_ms": 12.766,
+      "bwd_ms": 82.899,
+      "peak_gb": 3.343,
+      "tok_s": 5352,
+      "oom": false
+    },
+    {
+      "attn_impl": "sdpa",
+      "compile": true,
+      "seq_len": 2048,
+      "precision": "fp16",
+      "fwd_ms": 42.579,
+      "bwd_ms": 173.936,
+      "peak_gb": 4.184,
+      "tok_s": 9459,
+      "oom": false
+    },
+    {
+      "attn_impl": "sdpa",
+      "compile": true,
+      "seq_len": 4096,
+      "precision": "fp16",
+      "fwd_ms": 106.831,
+      "bwd_ms": 344.675,
+      "peak_gb": 6.127,
+      "tok_s": 9072,
+      "oom": false
+    },
+    {
+      "attn_impl": "sdpa",
+      "compile": true,
+      "seq_len": 8192,
+      "precision": "fp16",
+      "fwd_ms": 262.153,
+      "bwd_ms": 740.57,
+      "peak_gb": 9.943,
+      "tok_s": 8170,
+      "oom": false
+    }
+  ],
+  "config": {
+    "num_layers": 12,
+    "vocab_size": 50304,
+    "d_model": 768,
+    "num_heads": 12,
+    "d_ff": 2048,
+    "max_seq_len": 8192,
+    "theta": 10000.0,
+    "is_custom": false,
+    "attention_impl": "sdpa",
+    "seq_lens": [
+      512,
+      2048,
+      4096,
+      8192
+    ],
+    "seq_len": 8192,
+    "compile": true,
+    "batch_size": 1,
+    "precision": "fp16",
+    "warmup_iters": 5,
+    "measure_iters": 10,
+    "seed": 0,
+    "result_dir": "results/attn_sweep"
+  }
+}
