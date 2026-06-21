@@ -109,4 +109,4 @@ python -m benchmark.attention_sweep
 - eager compiled обычно не догоняет SDPA по памяти, но может слегка
   сэкономить время
 
-![[results/attn_sweep/attn_sweep.png]]
+![Attention seq len sweep](results/attn_sweep/attn_sweep.png) 
